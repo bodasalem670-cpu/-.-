@@ -72,7 +72,7 @@
             color: #444;
             font-size: 14px;
             white-space: pre-line;
-            max-height: 250px;
+            max-height: 220px;
             overflow-y: auto;
         }
         .counter-box {
@@ -94,17 +94,24 @@
             color: #333;
             font-weight: bold;
         }
-        .spotify-box {
-            margin-top: 15px;
+        .audio-box {
+            background: #fff0f3;
+            padding: 12px;
             border-radius: 15px;
-            overflow: hidden;
+            margin-top: 15px;
+            border: 1px solid #ff758c;
+        }
+        audio {
+            width: 100%;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
 
+    <!-- شاشة قفل الباسورد -->
     <div class="container" id="lock-screen">
-        <h2>🔒 افتح يا سمسم🤗💋</h2>
+        <h2>🔒 قفل الحب</h2>
         <div class="names">Boda & Hanoon ❤️</div>
         <p style="color: #666; font-size: 14px; margin-bottom: 15px;">اكتب الباسورد (love) عشان تفتح المفاجأة</p>
         <div class="pass-box">
@@ -114,10 +121,12 @@
         </div>
     </div>
 
+    <!-- محتوى المفاجأة الكامل -->
     <div class="container" id="main-content">
         <h2>نور عيني يا حنون ❤️</h2>
         <div class="names">مع بعض من تاريخ: 2025/4/16 🗓️</div>
 
+        <!-- رسالة من القلب -->
         <div class="message-card">
 حبيبتي، يمكن مهما أقولك ومهما حاولت أوصفلك اللي جوايا، مش هعرف أوصل لكِ حتى جزء صغير من قد إيه أنا بحبك. ❤️
 
@@ -138,14 +147,19 @@
 أنا بحبك يا حبيبتي… وباختصار شديد، وجودك في حياتي مش حاجة عايز أخسرها، وإنتِ من الناس اللي نفسي أفضل معاهم وأحافظ عليهم العمر كله. ❤️🫂
         </div>
 
+        <!-- عداد الوقت -->
         <div class="counter-box">
             <div class="counter-title">⏰ الوقت اللي فات معاكي</div>
             <div class="time-digits" id="timeCounter">جاري الحساب...</div>
         </div>
 
-        <div class="spotify-box">
-            <div style="font-size: 13px; color: #d63384; margin-bottom: 5px; font-weight: bold;">🎵 الأغنية اللي بنحبها</div>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6UeSakyzhiEt4NB3UAd6NQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <!-- مشغل الأغنية الصوتي المباشر -->
+        <div class="audio-box">
+            <div style="font-size: 13px; color: #d63384; font-weight: bold; margin-bottom: 5px;">🎵 أغنيتنا المفضلة (أحمد جمال - بحبك)</div>
+            <audio id="loveSong" controls loop>
+                <source src="song.mp3" type="audio/mp3">
+                متصفحك لا يدعم تشغيل الصوت
+            </audio>
         </div>
     </div>
 
@@ -155,6 +169,12 @@
             if (pass === "love") {
                 document.getElementById("lock-screen").style.display = "none";
                 document.getElementById("main-content").style.display = "block";
+                
+                // محاولة تشغيل الأغنية تلقائياً أول ما تفتح المفاجأة
+                var song = document.getElementById("loveSong");
+                song.play().catch(function(error) {
+                    console.log("Auto-play prevented by browser, user can press play manually.");
+                });
             } else {
                 alert("الباسورد خطأ يا حب، جرب تاني (love) ❌");
             }
