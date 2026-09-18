@@ -109,7 +109,6 @@
 </head>
 <body>
 
-    <!-- شاشة قفل الباسورد -->
     <div class="container" id="lock-screen">
         <h2>🔒 قفل الحب</h2>
         <div class="names">Boda & Hanoon ❤️</div>
@@ -121,12 +120,10 @@
         </div>
     </div>
 
-    <!-- محتوى المفاجأة الكامل -->
     <div class="container" id="main-content">
         <h2>نور عيني يا حنون ❤️</h2>
         <div class="names">مع بعض من تاريخ: 2025/4/16 🗓️</div>
 
-        <!-- رسالة من القلب -->
         <div class="message-card">
 حبيبتي، يمكن مهما أقولك ومهما حاولت أوصفلك اللي جوايا، مش هعرف أوصل لكِ حتى جزء صغير من قد إيه أنا بحبك. ❤️
 
@@ -147,17 +144,15 @@
 أنا بحبك يا حبيبتي… وباختصار شديد، وجودك في حياتي مش حاجة عايز أخسرها، وإنتِ من الناس اللي نفسي أفضل معاهم وأحافظ عليهم العمر كله. ❤️🫂
         </div>
 
-        <!-- عداد الوقت -->
         <div class="counter-box">
             <div class="counter-title">⏰ الوقت اللي فات معاكي</div>
             <div class="time-digits" id="timeCounter">جاري الحساب...</div>
         </div>
 
-        <!-- مشغل الأغنية الصوتي المباشر -->
         <div class="audio-box">
-            <div style="font-size: 13px; color: #d63384; font-weight: bold; margin-bottom: 5px;">🎵 أغنيتنا المفضلة (أحمد جمال - بحبك)</div>
-            <audio id="loveSong" controls loop>
-                <source src="song.mp3" type="audio/mp3">
+            <div style="font-size: 13px; color: #d63384; font-weight: bold; margin-bottom: 5px;">🎵 أغنيتنا المفضلة (بحبك)</div>
+            <audio id="loveSong" controls autoplay loop>
+                <source src="https://cdns-preview-d.dzcdn.net/stream/c-deda7b1b3699bcf879893d5c64b6e5e8-3.mp3" type="audio/mp3">
                 متصفحك لا يدعم تشغيل الصوت
             </audio>
         </div>
@@ -170,10 +165,9 @@
                 document.getElementById("lock-screen").style.display = "none";
                 document.getElementById("main-content").style.display = "block";
                 
-                // محاولة تشغيل الأغنية تلقائياً أول ما تفتح المفاجأة
                 var song = document.getElementById("loveSong");
                 song.play().catch(function(error) {
-                    console.log("Auto-play prevented by browser, user can press play manually.");
+                    console.log("Audio play allowed via controls");
                 });
             } else {
                 alert("الباسورد خطأ يا حب، جرب تاني (love) ❌");
