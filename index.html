@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة خاصة إلى حنون ❤️</title>
+    <style>
+        body {
+            background-color: #f9d6e3;
+            font-family: 'Tahoma', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+        }
+        h2 {
+            color: #d63384;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: right;
+            white-space: pre-line;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 2px solid #ffb3c6;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 15px;
+            outline: none;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #d90429;
+        }
+        #secret-content {
+            display: none;
+        }
+        .date-badge {
+            background: #fff0f3;
+            color: #d63384;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شاشة الباسورد -->
+    <div class="card" id="login-box">
+        <h2>🔒 قفل الحب</h2>
+        <p style="text-align: center;">اكتب الباسورد (love) عشان تفتح المفاجأة يا حنون ❤️</p>
+        <input type="password" id="passInput" placeholder="اكتب الباسورد هنا...">
+        <button onclick="checkPassword()">افتح المفاجأة ❤️</button>
+    </div>
+
+    <!-- المحتوى السري (الرسالة) -->
+    <div class="card" id="secret-content">
+        <h2>حنون ❤️</h2>
+        <div class="date-badge">تاريخنا: 2025/4/16 🗓️</div>
+        <p>حبيبتي، أنا عايزك تعرفي حاجة واحدة مهما حصل بينا ومهما زعلتي مني… أنا جنبك. ❤️
+
+جنبك في وقت فرحتك، وجنبك في وقت زعلك، وجنبك لما تكوني قوية ولما تكوني تعبانة ومحتاجة حد يسندك. مش عايزك أبدًا تحسي إنك لوحدك، ولا إن زعلك مني ممكن يخليني أبعد عنك.
+
+أنا عارف إني زعلتك، وعارف إن يمكن كلامي مش هيصلح كل حاجة في لحظة، بس أنا مستعد أسمعك وأفهمك وأصلح غلطتي، لأنك عندي مش مجرد شخص بحبه… إنتِ حد أنا حريص عليه وعلى قلبه وعلى مشاعره.
+
+أنا بحبك أوي، ويمكن ساعات معرفش أوضحلك ده بالطريقة الصح، بس صدقيني إنتِ من أكتر الناس اللي فارقة معايا في حياتي. زعلك بيهمني، فرحتك بتهمني، وحتى التفاصيل الصغيرة اللي تخصك بتهمني.
+
+ومش عايزك تفتكري إن لازم تبقي كويسة علشاني أو تخبي زعلك… خدي وقتك، اتكلمي، عيطي لو محتاجة، اسكتي لو مش قادرة تتكلمي، وأنا هفضل جنبك. مش هضغط عليكي، ومش هسيبك تحسي إنك لوحدك.
+
+حقك عليا يا حبيبتي ❤️
+أنا آسف على اللي حصل، وآسف إني كنت سبب في زعلك، وكل اللي نفسي فيه إن قلبك يهدى وتعرفي إن اللي قدامك ده بيحبك بجد، ومتمسك بيكي، ومش عايز يخسر وجودك في حياته.
+
+أنا جنبك… مش بس دلوقتي وإنتِ زعلانة، أنا جنبك في كل وقت. ❤️
+ولو الدنيا كلها ضغطت عليكي، عايزك تفتكري إن عندك حد تقدري ترجعي له وتلاقيه سامعك وموجود علشانك.
+
+بحبك يا حبيبتي، ومهما حصل بينا، إنتِ عندي أهم من أي خلاف. ❤️</p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var correctPass = "love"; 
+            var userInput = document.getElementById("passInput").value;
+
+            if (userInput === correctPass) {
+                document.getElementById("login-box").style.display = "none";
+                document.getElementById("secret-content").style.display = "block";
+            } else {
+                alert("الباسورد غلط يا حب، حاول تاني! ❌");
+            }
+        }
+    </script>
+
+</body>
+</html>
 
