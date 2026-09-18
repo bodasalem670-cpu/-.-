@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -94,22 +94,24 @@
             color: #333;
             font-weight: bold;
         }
-        .audio-box {
-            background: #fff0f3;
-            padding: 15px;
-            border-radius: 15px;
+        .video-box {
             margin-top: 15px;
+            background: #fff0f3;
+            padding: 12px;
+            border-radius: 15px;
             border: 1px solid #ff758c;
         }
-        audio {
+        iframe {
             width: 100%;
-            margin-top: 8px;
-            outline: none;
+            height: 200px;
+            border-radius: 12px;
+            border: none;
         }
     </style>
 </head>
 <body>
 
+    <!-- شاشة قفل الباسورد -->
     <div class="container" id="lock-screen">
         <h2>🔒 قفل الحب</h2>
         <div class="names">Boda & Hanoon ❤️</div>
@@ -121,10 +123,12 @@
         </div>
     </div>
 
+    <!-- محتوى المفاجأة الكامل -->
     <div class="container" id="main-content">
         <h2>نور عيني يا حنون ❤️</h2>
         <div class="names">مع بعض من تاريخ: 2025/4/16 🗓️</div>
 
+        <!-- رسالة من القلب -->
         <div class="message-card">
 حبيبتي، يمكن مهما أقولك ومهما حاولت أوصفلك اللي جوايا، مش هعرف أوصل لكِ حتى جزء صغير من قد إيه أنا بحبك. ❤️
 
@@ -145,19 +149,16 @@
 أنا بحبك يا حبيبتي… وباختصار شديد، وجودك في حياتي مش حاجة عايز أخسرها، وإنتِ من الناس اللي نفسي أفضل معاهم وأحافظ عليهم العمر كله. ❤️🫂
         </div>
 
+        <!-- عداد الوقت -->
         <div class="counter-box">
             <div class="counter-title">⏰ الوقت اللي فات معاكي</div>
             <div class="time-digits" id="timeCounter">جاري الحساب...</div>
         </div>
 
-        <div class="audio-box">
-            <div style="font-size: 13px; color: #d63384; font-weight: bold; margin-bottom: 5px;">🎵 أغنيتنا المفضلة</div>
-            
-            <audio controls preload="auto">
-                <source src="song.mp3" type="audio/mp3">
-                متصفحك لا يدعم تشغيل الصوت
-            </audio>
-
+        <!-- مشغل يوتيوب للأغنية المباشرة -->
+        <div class="video-box">
+            <div style="font-size: 13px; color: #d63384; font-weight: bold; margin-bottom: 8px;">🎵 أغنيتنا المفضلة (أحمد جمال - بحبك)</div>
+            <iframe src="https://www.youtube.com/embed/UlkAoUkLCrA" title="Ahmed Gamal - Bahebak" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
