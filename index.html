@@ -3,190 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلى حنونة قلبي ❤️</title>
+    <title>عبدالله سالم | Video Editor & Photographer</title>
     <style>
-        body {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-            font-family: 'Tahoma', sans-serif;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0f1016;
+            color: #f8f9fa;
+            font-family: 'Tahoma', sans-serif;
             padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            box-sizing: border-box;
         }
-        .container {
+        .cv-container {
             width: 100%;
-            max-width: 420px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 25px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 650px;
+            background: #181925;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2a2b3d;
             text-align: center;
         }
-        h2 {
-            color: #d63384;
+        .profile-img-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            box-shadow: 0 5px 20px rgba(255, 65, 108, 0.4);
+        }
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 26px;
             margin-bottom: 5px;
         }
-        .names {
-            font-size: 14px;
-            color: #888;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        .pass-box input {
-            width: 80%;
-            padding: 12px;
-            border: 2px solid #ff758c;
-            border-radius: 15px;
-            text-align: center;
-            font-size: 18px;
-            outline: none;
-            margin-bottom: 15px;
-            background: #fff0f3;
-            color: #d63384;
-        }
-        .pass-box button {
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 15px;
+        .title {
+            color: #ff416c;
             font-size: 16px;
-            cursor: pointer;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
-        }
-        #main-content {
-            display: none;
-        }
-        .message-card {
-            background: #fff0f3;
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px dashed #ff758c;
             margin-bottom: 20px;
-            text-align: right;
-            line-height: 1.9;
-            color: #444;
-            font-size: 14px;
-            white-space: pre-line;
-            max-height: 220px;
-            overflow-y: auto;
+            letter-spacing: 1px;
         }
-        .counter-box {
-            background: white;
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-            border: 1px solid #ffe3e9;
-        }
-        .counter-title {
-            color: #ff758c;
-            font-weight: bold;
-            margin-bottom: 8px;
+        .bio {
+            color: #d0d3e0;
             font-size: 15px;
-        }
-        .time-digits {
-            font-size: 18px;
-            color: #333;
-            font-weight: bold;
-        }
-        .video-box {
-            margin-top: 15px;
-            background: #fff0f3;
-            padding: 12px;
-            border-radius: 15px;
-            border: 1px solid #ff758c;
-        }
-        iframe {
-            width: 100%;
-            height: 200px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            background: #232433;
+            padding: 15px;
             border-radius: 12px;
-            border: none;
+            border: 1px solid #3a3b50;
+        }
+        .section-title {
+            color: #ffffff;
+            font-size: 18px;
+            margin: 25px 0 15px 0;
+            border-bottom: 2px solid #ff416c;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .skill-tag {
+            background: #232433;
+            color: #ff4b2b;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            border: 1px solid #3a3b50;
+        }
+        .works-box {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .video-btn {
+            background: #232433;
+            color: #ffffff;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #3a3b50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+        .video-btn:hover {
+            background: #2f3144;
+            border-color: #ff416c;
+            transform: translateY(-2px);
+        }
+        /* معرض الصور الشخصية/الفوتوغرافيا */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .photo-card {
+            background: #232433;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #3a3b50;
+            transition: 0.3s;
+        }
+        .photo-card:hover {
+            transform: scale(1.03);
+            border-color: #ff416c;
+        }
+        .photo-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .contact-box {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .btn {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            padding: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
-    <!-- شاشة قفل الباسورد -->
-    <div class="container" id="lock-screen">
-        <h2>🔒 افتحى يا ست البنات💋😍</h2>
-        <div class="names">Boda & Hanoon ❤️</div>
-        <p style="color: #666; font-size: 14px; margin-bottom: 15px;">اكتب الباسورد (love) عشان تفتح المفاجأة</p>
-        <div class="pass-box">
-            <input type="password" id="passwordInput" placeholder="اكتب الباسورد هنا...">
-            <br>
-            <button onclick="unlock()">فتح المفاجأة ❤️</button>
+    <div class="cv-container">
+        <!-- صورتك الشخصية الرئيسية (خلينا الأولى هي البروفايل أو تقدر تغيرها براحتك) -->
+        <div class="profile-img-container">
+            <img src="photo1.jpg" alt="عبدالله سالم">
+        </div>
+        
+        <h1>عبدالله سالم</h1>
+        <div class="title">Professional Video Editor & Photographer</div>
+
+        <!-- المقدمة والنبذة -->
+        <div class="bio">
+            أنا عبدالله سالم، مُونتير ومصور احترافي. شغوف بتحويل الأفكار الخام إلى قصص بصرية تنبض بالحياة. أمتلك خبرة في دمج اللقطات، هندسة الألوان، وصناعة محتوى بصري يخطف الأنظار ويترك أثراً لا يُنسى.
+        </div>
+
+        <div class="section-title">المهارات والخبرات</div>
+        <div class="skills-grid">
+            <span class="skill-tag">Video Editing (مونتاج)</span>
+            <span class="skill-tag">Photography (تصوير)</span>
+            <span class="skill-tag">Color Grading (تصحيح ألوان)</span>
+            <span class="skill-tag">Premiere Pro</span>
+            <span class="skill-tag">After Effects</span>
+            <span class="skill-tag">Photoshop</span>
+        </div>
+
+        <!-- معرض الصور الفوتوغرافية -->
+        <div class="section-title">معرض الفوتوغرافيا (Photography)</div>
+        <div class="photo-gallery">
+            <div class="photo-card">
+                <img src="photo1.jpg" alt="عبدالله سالم">
+            </div>
+            <div class="photo-card">
+                <img src="photo2.jpg" alt="عبدالله سالم">
+            </div>
+            <div class="photo-card">
+                <img src="photo3.jpg" alt="عبدالله سالم">
+            </div>
+        </div>
+
+        <!-- معرض الفيديوهات (درايف) -->
+        <div class="section-title">معرض الفيديوهات (Showreel)</div>
+        <div class="works-box">
+            <a href="https://drive.google.com/file/d/1AOADf-IC2owT07YbxsfZ1M4n-D9usw-3/view?usp=drivesdk" target="_blank" class="video-btn">🎬 مشاهدة العمل الأول (Video 1)</a>
+            <a href="https://drive.google.com/file/d/1vXpYgVlY4SAGUGNH-4q2UMx-GwpBXG3_/view?usp=drivesdk" target="_blank" class="video-btn">🎬 مشاهدة العمل الثاني (Video 2)</a>
+            <a href="https://drive.google.com/file/d/1n43ZBW9D3r3KCrw3a4CTdHR2xvNqVVX-/view?usp=drivesdk" target="_blank" class="video-btn">🎬 مشاهدة العمل الثالث (Video 3)</a>
+            <a href="https://drive.google.com/file/d/1AO_GfOL20qHo07nyfUpi6r5KrUh5zahJ/view?usp=drivesdk" target="_blank" class="video-btn">🎬 مشاهدة العمل الرابع (Video 4)</a>
+            <a href="https://drive.google.com/file/d/1KQbAiQP4CnlKaGUiMhzkTXTNE8VNbY2v/view?usp=drivesdk" target="_blank" class="video-btn">🎬 مشاهدة العمل الخامس (Video 5)</a>
+            <a href="https://drive.google.com/file/d/18t-MvuCnSZsxSIJAsGYsZXs2l78GqnAY/view?usp=drivesdk" target="_blank" class="video-btn">🎬 مشاهدة العمل السادس (Video 6)</a>
+        </div>
+
+        <!-- قسم التواصل -->
+        <div class="section-title">تواصل معي</div>
+        <div class="contact-box">
+            <a href="tel:01063751812" class="btn">📞 01063751812 (اتصال / واتساب)</a>
+            <a href="mailto:bodasalem670@Gmail.com" class="btn" style="background: #232433; border: 1px solid #3a3b50;">✉️ bodasalem670@Gmail.com</a>
         </div>
     </div>
 
-    <!-- محتوى المفاجأة الكامل -->
-    <div class="container" id="main-content">
-        <h2>نور عيني يا حنون ❤️</h2>
-        <div class="names">مع بعض من تاريخ: 2025/4/16 🗓️</div>
-
-        <!-- رسالة من القلب -->
-        <div class="message-card">
-حبيبتي، يمكن مهما أقولك ومهما حاولت أوصفلك اللي جوايا، مش هعرف أوصل لكِ حتى جزء صغير من قد إيه أنا بحبك. ❤️
-
-إنتِ بالنسبالي مش مجرد حبيبتي، إنتِ بقيتي جزء من يومي ومن تفكيري ومن كل حاجة حلوة في حياتي. بقيت متعود على وجودك، على صوتك، على كلامك، على ضحكتك، وحتى على زعلك مني… لأن وجودك نفسه بقى حاجة أساسية في حياتي.
-
-أنا مقدرش أتخيل حياتي من غيرك، ولا أتخيل أيامي من غير ما يكون فيها صوتك وكلامك ووجودك. مش عشان أنا مش قادر أعيش لوحدي، لكن عشان الحياة بوجودك بقت ليها معنى وطعم مختلف، وبقيتي الشخص اللي نفسي أكمل معاه كل حاجة حلوة جاية في حياتي.
-
-بحبك في كل حالاتك… بحبك وإنتِ مبسوطة، وإنتِ زعلانة، وإنتِ بتضحكي، وإنتِ ساكتة، وحتى لما تكوني متضايقة مني. ومهما حصل بينا، عمري ما هبصلك كإنك شخص عادي ممكن أستغنى عنه بسهولة، لأنك بالنسبة لي مش كده أبدًا.
-
-أنا عايز أفضل جنبك، أشاركك أيامك، أسمعك لما تكوني محتاجة تتكلمي، وأسندك لما تتعبي، وأفرح بفرحتك كأنها فرحتي. نفسي أكون الشخص اللي تطمني له وتحسي معاه إنك مش لوحدك مهما الدنيا حصل فيها إيه.
-
-ولو سألتيني إيه أكتر حاجة بخاف منها؟ هقولك إني أخسرك، لأن فكرة إن حياتي تكمل من غير وجودك فيها بتوجعني حتى وأنا بتخيلها.
-
-أنا بحبك حب مش مربوط بيوم حلو ولا بكلمة حلوة ولا بموقف معين… أنا بحبك عشان إنتِ إنتِ، عشان روحك، عشان تفاصيلك، عشان المكان اللي خدتيه جوا قلبي من غير ما أحس.
-
-وعايزك مهما زعلتي مني تفضلي عارفة إنك غالية عليا، وإن قلبي متمسك بيكي، وإن آخر حاجة ممكن أتمناها هي إنك تبعدي عني.
-
-أنا بحبك يا حبيبتي… وباختصار شديد، وجودك في حياتي مش حاجة عايز أخسرها، وإنتِ من الناس اللي نفسي أفضل معاهم وأحافظ عليهم العمر كله. ❤️🫂
-        </div>
-
-        <!-- عداد الوقت -->
-        <div class="counter-box">
-            <div class="counter-title">⏰ الوقت اللي فات معاكي</div>
-            <div class="time-digits" id="timeCounter">جاري الحساب...</div>
-        </div>
-
-        <!-- مشغل يوتيوب للأغنية المباشرة -->
-        <div class="video-box">
-            <div style="font-size: 13px; color: #d63384; font-weight: bold; margin-bottom: 8px;">🎵 أغنيتنا المفضلة (أحمد جمال - بحبك)</div>
-            <iframe src="https://www.youtube.com/embed/UlkAoUkLCrA" title="Ahmed Gamal - Bahebak" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <script>
-        function unlock() {
-            var pass = document.getElementById("passwordInput").value;
-            if (pass === "love") {
-                document.getElementById("lock-screen").style.display = "none";
-                document.getElementById("main-content").style.display = "block";
-            } else {
-                alert("الباسورد خطأ يا حب، جرب تاني (love) ❌");
-            }
-        }
-
-        // حساب الوقت تلقائياً من تاريخ 16 أبريل 2025
-        function updateCounter() {
-            var startDate = new Date("2025-04-16T00:00:00");
-            var now = new Date();
-            var diff = now - startDate;
-
-            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById("timeCounter").innerHTML = days + " يوم | " + hours + " ساعة<br>" + minutes + " دقيقة | " + seconds + " ثانية";
-        }
-        setInterval(updateCounter, 1000);
-    </script>
 </body>
 </html>
